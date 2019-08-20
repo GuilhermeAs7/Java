@@ -11,11 +11,10 @@ public class Exercicio_StringIguais {
 		System.out.println("Entre com o segundo nome: ");
 		String nome2 = input.next();
 		
-		//Coloca as strings em caixa alta
-		nome1 = nome1.toUpperCase();
-		nome2 = nome2.toUpperCase();
+		// compara se as duas strings sao iguais .eguals e 
+		//ignora caixa alta ou baixa .IgnoreCase
 		
-		if(nome1.equals(nome2)){ // compara se as duas strings sao iguais
+		if(nome1.equalsIgnoreCase(nome2)){ 
 			
 			System.out.println("Nomes iguais");
 		}
