@@ -7,9 +7,9 @@ public class AlunoTeste {
 		
 		aluno.setNome("Wesley");
 		aluno.setMatricula("0716259");
-		aluno.setCurso("Matem·tica");
+		aluno.setCurso("Matem√°tica");
 		
-		aluno.MostrarLog(); // Chama funÁ„o para printar 
+		aluno.MostrarLog(); // Chama fun√ß√£o para printar 
 	}
 
 }
