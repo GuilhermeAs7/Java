@@ -5,7 +5,7 @@ public class Aluno {
 	private String curso;
 	private String nome;
 	
-	//Funções para mudança no atributo 
+	//FunÃ§Ãµes para mudanÃ§a no atributo 
 	
 	public String getMatricula() {
 		return matricula;
@@ -31,7 +31,7 @@ public class Aluno {
 		this.nome = nome;
 	}
 	
-	//Função para printar atributo
+	//FunÃ§Ã£o para printar atributo
 	
 	public void MostrarLog(){
 		
