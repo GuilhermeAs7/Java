@@ -1,0 +1,48 @@
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+import java.awt.*;
+
+public class Login {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		JFrame login = new JFrame("Login");
+		JLabel usuario = new JLabel("Usuário:");
+		JTextField user = new JTextField(10); 
+		JLabel senha = new JLabel("Senha:");
+		JTextField password = new JPasswordField(10);
+		JButton botao = new JButton("Entrar");
+		
+		login.add(usuario);
+		login.add(user);
+		login.add(senha);
+		login.add(password);
+		login.add(botao);
+		login.setSize(500,500);
+		login.setVisible(true);
+		
+		login.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		login.setLayout(new FlowLayout());
+		
+		ActionListener button = new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (user.getText().equals("admin") && password.getText().equals("admin")){
+					
+					usuario.setText(null);
+					senha.setText(null);
+					JOptionPane.showMessageDialog(login, "Logado");
+				}
+				else
+					JOptionPane.showMessageDialog(login, "Usuário ou senha inválidos");
+			}
+		};
+		botao.addActionListener(button); 
+		}
+	}
