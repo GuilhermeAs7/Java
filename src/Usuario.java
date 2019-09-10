@@ -1,3 +1,5 @@
+//Guilherme Alexandre - 0050015038
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -21,7 +23,7 @@ public class Usuario {
 			System.out.println("Login efetuado com sucesso!\n");
 		}
 		else {
-			System.out.println("Credencial errada, deseja tentar novamente? (1-Sim/2-Não)");
+			System.out.println("Credencial errada, deseja tentar novamente? (1-Sim/2-NÃ£o)");
 			String SimNao = credencial.next();
 			if(SimNao.contentEquals("1")) {
 				login();
@@ -39,7 +41,7 @@ public class Usuario {
 		if(usuarioLogado)
 		tweets.add(t1);
 		else
-		System.out.println("Faça o Login para continuar.");
+		System.out.println("FaÃ§a o Login para continuar.");
 	}
 	
 	public void imprimirTweet()
