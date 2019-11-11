@@ -1,7 +1,5 @@
 package com.poo.view;
-
 import java.util.Scanner;
-
 import com.poo.controller.AlunoController;
 import com.poo.dao.AlunoDAO;
 import com.poo.model.Aluno;
@@ -13,9 +11,9 @@ public class AlunoView {
 				String nome,matricula;
 				Scanner s1 = new Scanner(System.in);
 				Aluno a1 = new Aluno();
-				System.out.println("Digite nome: ");
+				System.out.println("Digite o nome: ");
 				nome = s1.nextLine();
-				System.out.println("Digite Matricula: ");
+				System.out.println("Digite a Matricula: ");
 				matricula = s1.next();
 				a1.setMatricula(matricula);
 				a1.setNome(nome);
@@ -24,7 +22,7 @@ public class AlunoView {
 				}
 			catch (Exception e)
 				{
-				System.out.println("Erro ao incluir aluno");
+				System.out.println("Erro ao incluir aluno.");
 				
 				}
 		}
@@ -46,7 +44,7 @@ public class AlunoView {
 				String nome,matricula;
 				Scanner s1 = new Scanner(System.in);
 				Aluno a1 = new Aluno();
-				System.out.println("Digite nome novo: ");
+				System.out.println("Digite o novo nome: ");
 				nome = s1.nextLine();
 				System.out.println("Digite a Matricula antiga: ");
 				matricula = s1.next();
@@ -57,7 +55,7 @@ public class AlunoView {
 				}
 			catch (Exception e)
 				{
-				System.out.println("Erro ao incluir o aluno");
+				System.out.println("Erro ao incluir o aluno.");
 				
 				}
 		}
@@ -75,7 +73,7 @@ public class AlunoView {
 				}
 			catch (Exception e)
 				{
-				System.out.println("Erro ao remover o aluno");
+				System.out.println("Erro ao remover o aluno.");
 				
 				}
 		}
@@ -86,18 +84,5 @@ public class AlunoView {
 		a1.ReadAll();
 		a1.Update();
 		a1.Delete();
-		
-		
-	
-	
-	
-	
-	
-	
-	
 	}
-
-	
-	}
-
-
+}
