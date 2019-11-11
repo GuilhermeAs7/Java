@@ -1,8 +1,6 @@
 package com.poo.controller;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import com.poo.dao.AlunoDAO;
 import com.poo.model.Aluno;
 
@@ -57,8 +55,4 @@ public class AlunoController {
 			System.out.println("Fim da Insercao");
 		}
 	}
-
-
-
-
 }
