@@ -1,6 +1,7 @@
 package com.poo.model;
 
 public class Aluno {
+	
 	private String matricula;
 	private String nome;
 	
@@ -16,5 +17,4 @@ public class Aluno {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-
 }
