@@ -1,12 +1,10 @@
 package com.poo.dao;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-
 import com.mysql.cj.protocol.Resultset;
 import com.poo.jdbc.ConnectionFactory;
 import com.poo.model.Aluno;
@@ -16,7 +14,7 @@ public class AlunoDAO {
 	public void Create(Aluno aluno)
 	{
 		Connection con =  ConnectionFactory.getConnection();
-		System.out.println("Conexao OK");
+		System.out.println("Conexao: OK");
 		PreparedStatement stmt = null;
 
 		String sql = "insert into aluno values(?,?)";
@@ -27,12 +25,12 @@ public class AlunoDAO {
 			stmt.setString(2, aluno.getNome());
 
 			stmt.executeUpdate();
-			System.out.println("Inserido com Sucesso");
+			System.out.println("Inserido com sucesso.");
 
 		}
 		catch(SQLException e){
 			e.printStackTrace();
-			System.out.println("Erro ao inserir");
+			System.out.println("Erro ao inserir.");
 		}
 		finally
 		{
@@ -62,11 +60,11 @@ public class AlunoDAO {
 				}
 
 
-				System.out.println("Pesquisa feita com sucesso");
+				System.out.println("Pesquisa feita com sucesso.");
 			}
 			catch(SQLException e)
 			{
-				System.out.println("Erro ao ler tabela");
+				System.out.println("Erro ao ler tabela.");
 			}
 			finally{
 				ConnectionFactory.closeConnection(con,stmt);
@@ -78,7 +76,7 @@ public class AlunoDAO {
 		public void Delete(Aluno Aluno)
 		{
 			Connection con =  ConnectionFactory.getConnection();
-			System.out.println("Conexao OK");
+			System.out.println("Conexao: OK");
 			PreparedStatement stmt = null;
 
 			String sql = "delete from aluno where matricula = ?";
@@ -88,12 +86,12 @@ public class AlunoDAO {
 				stmt.setString(1, Aluno.getMatricula());
 
 				stmt.executeUpdate();
-				System.out.println("Aluno excluido com Sucesso");
+				System.out.println("Aluno excluido com sucesso.");
 
 			}
 			catch(SQLException e){
 				e.printStackTrace();
-				System.out.println("Erro ao excluir");
+				System.out.println("Erro ao excluir.");
 			}
 			finally
 			{
@@ -114,18 +112,16 @@ public class AlunoDAO {
 				stmt.setString(1, Aluno.getMatricula());
 
 				stmt.executeUpdate();
-				System.out.println("Informacao do Aluno atualizada com Sucesso");
+				System.out.println("Informacao do Aluno atualizada com sucesso.");
 
 			}
 			catch(SQLException e){
 				e.printStackTrace();
-				System.out.println("Erro ao atualizar info.");
+				System.out.println("Erro ao atualizar informacoes.");
 			}
 			finally
 			{
 				ConnectionFactory.closeConnection(con,stmt);
 			}
 		}
-
-
 	}
